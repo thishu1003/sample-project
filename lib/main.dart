@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sample_project/login.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,48 +10,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Welcome to My Office',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('My Name !!!'),
-        ),
-        body: Stack(
-          children: [
-            Container(
-              alignment: Alignment.center,
-              color: Colors.redAccent,
-              child: Container(
-                alignment: Alignment.center,
-                color: Colors.white,
-                width: 400,
-                height: 300,
-                child: Column(children: [
-                  const Text('Login'),
-                  TextFormField(),
-                  TextField(),
-                  Row(
-                    children: [
-                      TextButton(
-                          onPressed: null,
-                          child: Container(
-                            color: Colors.redAccent,
-                            child: const Text('Login'),
-                          )),
-                      TextButton(
-                          onPressed: null,
-                          child: Container(
-                            color: Colors.redAccent,
-                            child: const Text('Cancel'),
-                          ))
-                    ],
-                  ),
-                ]),
-              ),
-            )
-          ],
-        ),
-      ),
-    );
+    return const MaterialApp(
+        title: 'Welcome to My Office', home: loginwidget());
   }
 }
